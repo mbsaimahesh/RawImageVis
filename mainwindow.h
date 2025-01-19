@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileDialog>
+#include <QLabel>
+#include "raw_file_process.h"
+#include<QImage>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,6 +20,9 @@ class MainWindow : public QMainWindow {
 public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
+
+private slots:
+  void on_actionLoad_Image_triggered();
 
 private:
   Ui::MainWindow *ui;
